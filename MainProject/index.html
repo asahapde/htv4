@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>The Space Project</title>
+        <title>Horizons</title>
+        <script type="text/javascript" src="space_planets.json"></script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
         <!--Main Container-->
         <div class="container-fullwidth">
+            <script>
+                var local_data = data;
+            </script>
             <!-- Navbar content -->
             <nav class="navbar sticky-top navbar-expand-sm navbar-light" id="nav1">
                 <div class="d-flex flex-grow-1">
                     <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
                     <a class="navbar-brand" href="#">
-                        The Space Project
+                        <img src="resources/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Horizons
                     </a>
                     <div class="w-100 text-right">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
@@ -35,12 +39,47 @@
             <!--JumboTron Container-->
             <div class="bg">
                 <div class="jumbotron">
-                    <h1 class="display-4">Hello!</h1>
-                    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                    <h1 class="display-4">Time to Dream Bigger</h1>
+                    <p class="lead">The initiative of Horizons is to push them for youth across the world. Humans are just one species on a tiny rock floating through an infinite galaxy, it’s time to think bigger.</p>
                     <hr class="my-4">
-                    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
                     <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
                   </div>
+            </div>
+            <!--Main Content-->
+            <div class="main-container">
+                <div class="row row-fit">
+                    <div class="col">
+                      <h2 id="planet-name">Planet Name</h2>
+                    </div>
+                </div>
+                <div class="row row-fit">
+                    <div class="col">
+                        <h3 class="planet-sim">Earth Similarity</h3>
+                        <h5 id="planet-sim-percent"></h5>
+                    </div>
+                    <div class="col">
+                        <img src="resources/planet1.jpg" alt="https://via.placeholder.com/150" class="img-thumbnail" id="planet-image">
+                    </div>
+                    <div class="col">
+                      <h3 class="planet-info">Information</h3>
+                      <ul>
+                          <li class="info" id="info1">Planet Number:</li>
+                          <li class="info" id="info2">Days of orbit:</li>
+                          <li class="info" id="info3">Planet Distance:</li>
+                          <li class="info" id="info4">Planet Temperature:</li>
+                          <li class="info" id="info5">Planet Mass:</li>
+                          <li class="info" id="info6">Planet Radius:</li>
+                          <li class="info" id="info7">Discovery Date:</li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="row row-fit">
+                    <div class="col col-fit">
+                        <button type="button" class="btn btn-light" id="prev-btn">Previous</button>
+                        <button type="button" class="btn btn-lg btn-light" id="rand-btn">Random</button>
+                        <button type="button" class="btn btn-light" id="next-btn">Next</button>
+                    </div>
+                </div>
             </div>
             <!--About Us-->
             <div class="ab-container" id="about">
@@ -52,7 +91,7 @@
                             <img class="card-img-top" src="resources/ab.jpg" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">Abdullah Sahapdeen</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text">Is a Sophomore at Western University studying Software Engineering, he is part of the first undergraduate space initiative in Canada.</p>
                               <a href="https://github.com/asahapde" class="btn btn-primary">Github</a>
                             </div>
                           </div>
@@ -62,7 +101,7 @@
                             <img class="card-img-top" src="resources/jp.jpg" alt="Card image cap">
                             <div class="card-body">
                               <h5 class="card-title">John Paul Schnabel</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <p class="card-text">A 2nd Year Software Engineer from Western University, he is launching a research balloon into space with the Canadian Space Agency this summer.</p>
                               <a href="https://github.com/jp-schnabel" class="btn btn-primary">Github</a>
                             </div>
                           </div>
@@ -80,5 +119,6 @@
               
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,5 +1,6 @@
 import pandas as pd
 import random
+import json
 
 df1 = pd.read_csv('planets_space.csv')
 df2 = df1.dropna()
@@ -58,7 +59,13 @@ df4["Planet_Error"] = error_array
 
 df4.to_json('space_planets.json')
 
-print('My name is Jeff')
+data = json.load('space_planets.json')
+
+new_data = "data = " + data
+
+print(new_data)
+
+
 
 print(df4)
 
